@@ -11,17 +11,17 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-# Copy package files first for better caching
+# Copy package files first
 COPY package*.json ./
 
-# Install dependencies with specific flags
-RUN npm ci --only=production --no-audit --no-fund
+# Install dependencies
+RUN npm install --production
 
 # Copy source code
 COPY . .
 
-# Create temp directory with proper permissions
-RUN mkdir -p temp && chmod 755 temp
+# Create temp directory
+RUN mkdir -p temp
 
 # Expose port
 EXPOSE 3000
