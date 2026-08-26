@@ -1,44 +1,35 @@
 # Image Converter Telegram Bot
 
-A Telegram bot that converts images between different formats using Node.js and Sharp.
+A Telegram bot that converts images between different formats.
 
 ## Features
 
-- Convert images between PNG, JPEG, WEBP, TIFF, AVIF, and HEIF formats
-- Handle both photos and document images
-- High-quality conversion preserving image resolution
-- Simple and intuitive interface
+- Convert between PNG, JPEG, WEBP, TIFF, AVIF, HEIF
+- Handles both photos and documents
+- High-quality conversion
+- Simple interface
 
 ## Commands
 
-- `/start` - Start the bot and see welcome message
-- `/help` - Show help information
+- `/start` - Start the bot
+- `/help` - Show help
 - `/formats` - Show supported formats
-- `/cancel` - Cancel current operation
+- `/cancel` - Cancel operation
 
-## Setup
+## Deployment
 
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Create `.env` file with your bot token
-4. Run locally: `npm start`
-
-## Deployment on Railway
-
-1. Push code to GitHub
-2. Connect your GitHub repository to Railway
-3. Add environment variable `BOT_TOKEN`
-4. Deploy
+1. Fork this repository
+2. Create bot on Telegram via @BotFather
+3. Deploy on Railway
+4. Set BOT_TOKEN environment variable
 
 ## Environment Variables
 
-- `BOT_TOKEN`: Your Telegram bot token from @BotFather
-- `PORT`: Port for the web server (default: 3000)
+- `BOT_TOKEN` - Your Telegram bot token (required)
+- `PORT` - Server port (default: 3000)
 
-## Tech Stack
+## Local Development
 
-- Node.js
-- Telegram Bot API
-- Sharp (image processing)
-- Express
-- Docker
+```bash
+npm install
+npm start
