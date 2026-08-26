@@ -3,3 +3,4 @@ temp/
 .env
 *.log
 .DS_Store
+npm-debug.log*
